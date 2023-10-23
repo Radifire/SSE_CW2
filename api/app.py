@@ -13,3 +13,8 @@ def submit():
     input_name = request.form.get("name")
     input_age = request.form.get("age")
     return render_template("hello.html", name=input_name, age=input_age)
+
+def process_query(q):
+	if (q == "dinosaurs") :
+		return "Dinosaurs ruled the Earth 200 million years ago"
+	return "Unknown"
