@@ -21,6 +21,14 @@ def process_query(query):
         return "Dinosaurs ruled the Earth 200 million years ago"
     elif ("name" in query):
         return "Fly Devs"
+    elif ("largest" in query):
+        query_words = query.split(" ")
+        numbers = []
+        for word in query_words:
+            if word and word[0].isdigit():
+                word = word[:-1]
+                numbers.append(int(word))
+        return max(numbers)
     return "Unknown"
 
 
