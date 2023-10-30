@@ -105,4 +105,18 @@ Total 5 (delta 4), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (4/4), completed with 4 local objects.        
 To github.com:Radifire/SSE_CW2.git
    ecfecdf..461ddc7  main -> main
+jg2023@texel43:SSE_CW2$ git add --all
+jg2023@texel43:SSE_CW2$ git commit -m "and"
+[main ecf1e6c] and
+ 2 files changed, 38 insertions(+), 2 deletions(-)
+jg2023@texel43:SSE_CW2$ git push
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 779 bytes | 389.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.        
+To github.com:Radifire/SSE_CW2.git
+   461ddc7..ecf1e6c  main -> main
 jg2023@texel43:SSE_CW2$ 

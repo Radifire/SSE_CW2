@@ -28,7 +28,7 @@ def process_query(query):
             if word and word[0].isdigit():
                 word = word[:-1]
                 numbers.append(int(word))
-        return str(max(numbers))
+        return max(numbers)
     return "Unknown"
 
 
