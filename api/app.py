@@ -46,7 +46,7 @@ def process_query(query):
             if round(cube_root) ** 3 == i:
                 if round(square_root) ** 2 == i:
                     return str(i)
-    elif "multiplied" in i:
+    elif "multiplied" in query:
         numbers = get_numbers(query)
         return str(numbers[0] * numbers[1])
     elif "plus" in query:
