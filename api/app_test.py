@@ -35,4 +35,5 @@ def test_multiplication():
 
 def test_find_square_and_cube():
 
-    assert process_query("Which of the following numbers is both a square and a cube: 3819, 944, 1772, 125, 319, 4356, 64?") == 64
+    assert process_query("Which of the following numbers is both a square \
+     and a cube: 3819, 944, 1772, 125, 319, 4356, 64?") == 64
