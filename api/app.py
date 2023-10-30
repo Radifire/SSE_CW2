@@ -20,7 +20,7 @@ def get_numbers(query):
     query_words = query.split(" ")
     numbers = []
     for word in query_words:
-        if word[0].isdigit():
+        if word and word[0].isdigit():
             new_word = ""
             for w in word:
                 if w.isdigit():
