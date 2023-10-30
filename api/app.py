@@ -35,9 +35,11 @@ def process_query(query):
         query_words = query.split(" ")
         numbers = []
         for word in query_words:
-            if word.isdigit():
-                if numbers:
-                    return sum(numbers)
+            if word[0].isdigit():
+                if word[-1] == '?'
+                    word = word[:-1]
+        if numbers:
+            return sum(numbers)
         else:
             return "No numbers found in the query"
     return "Unknown"
