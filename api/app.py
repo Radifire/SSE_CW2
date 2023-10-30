@@ -24,7 +24,7 @@ def get_numbers(query):
             new_word = ""
             for w in word:
                 if w.isdigit():
-                    new_word.append(w)
+                    new_word += w
             numbers.append(int(new_word))
     return numbers
 
