@@ -1,0 +1,33 @@
+jg2023@texel43:api$ git add --all
+jg2023@texel43:api$git pull
+remote: Enumerating objects: 11, done.        
+remote: Counting objects: 100% (11/11), done.        
+remote: Compressing objects: 100% (5/5), done.        
+remote: Total 8 (delta 4), reused 7 (delta 3), pack-reused 0        
+Unpacking objects: 100% (8/8), 823 bytes | 14.00 KiB/s, done.
+From github.com:Radifire/SSE_CW2
+   a82fa99..6b19409  main       -> origin/main
+Updating a82fa99..6b19409
+Fast-forward
+ api/app_test.py | 7 +++++++
+ 1 file changed, 7 insertions(+)
+jg2023@texel43:api$ git add --all
+jg2023@texel43:api$ git commit -m "Added largest query"
+[main 31b5763] Added largest query
+ 1 file changed, 8 insertions(+)
+jg2023@texel43:api$ git add --all
+jg2023@texel43:api$ git commit -m "Corrected wrong type"
+[main abc84a2] Corrected wrong type
+ 1 file changed, 1 insertion(+)
+ create mode 120000 api/.#app.py
+jg2023@texel43:api$ git push
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 876 bytes | 219.00 KiB/s, done.
+Total 8 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.        
+To github.com:Radifire/SSE_CW2.git
+   6b19409..abc84a2  main -> main
+jg2023@texel43:api$ 

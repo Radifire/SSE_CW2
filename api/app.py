@@ -25,9 +25,9 @@ def process_query(query):
         query_words = query.split(" ");
         numbers = []
         for word in query_words:
-            if isdigit(word[0])
+            if word[0].isdigit()
                 word = word[:-1]
-                numbers.append(word)
+                numbers.append(int(word))
         return str(max(numbers))
     return "Unknown"
 
