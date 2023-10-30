@@ -39,7 +39,7 @@ def process_query(query):
                 if numbers:
                     return sum(numbers)
         else:
-            return "No numbers found in the query"            
+            return "No numbers found in the query"         
     return "Unknown"
 
 
