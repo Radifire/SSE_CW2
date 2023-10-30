@@ -37,3 +37,14 @@ def test_find_square_and_cube():
 
     assert process_query("Which of the following numbers is both a square \
      and a cube: 3819, 944, 1772, 125, 319, 4356, 64?") == "64"
+
+
+def test_subtraction():
+
+    assert process_query("What is 28 minus 26") == "2"
+    assert process_query("What is 23 minus 80") == "-57"
+
+
+def test_list_primes():
+
+    assert process_query("Which of the following numbers are primes: 71, 62, 4, 36, 31?") == "71, 31"
