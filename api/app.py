@@ -48,7 +48,7 @@ def process_query(query):
                     return str(i)
     elif "multiplied" in query:
         numbers = get_numbers(query)
-        return str(numbers[0] * numbers[1])
+        return str(int(numbers[0]) * int(numbers[1]))
     elif "plus" in query:
         query_words = query.split(" ")
         numbers = []
