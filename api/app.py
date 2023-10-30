@@ -34,8 +34,8 @@ def is_prime(number):
     root = num ** (1/2)
     for i in range(2, root+1):
         if num % i == 0:
-            return false
-    return true
+            return False
+    return True
 
 
 def process_query(query):
@@ -63,6 +63,7 @@ def process_query(query):
     elif "plus" in query:
         return str(sum(numbers))
     return "Unknown"
+
 
 @app.route('/query', methods=['GET'])
 def query():
