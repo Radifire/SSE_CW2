@@ -38,7 +38,7 @@ def process_query(query):
             if word[0].isdigit():
                 if word[-1] == '?':
                     word = word[:-1]
-                numbers.append(word)
+                numbers.append(int(word))
         if numbers:
             return sum(numbers)
         else:
