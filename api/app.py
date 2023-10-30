@@ -22,7 +22,7 @@ def process_query(query):
     elif ("name" in query):
         return "Fly Devs"
     elif ("largest" in query):
-        query_words = query.split(" ");
+        query_words = query.split(" ")
         numbers = []
         for word in query_words:
             if word[0].isdigit():

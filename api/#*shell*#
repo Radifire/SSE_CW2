@@ -46,4 +46,27 @@ Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.        
 To github.com:Radifire/SSE_CW2.git
    abc84a2..6c11244  main -> main
-jg2023@texel43:api$ 
+jg2023@texel43:api$ source .venv/bin/activate
+bash: .venv/bin/activate: No such file or directory
+jg2023@texel43:api$ cd ..
+jg2023@texel43:SSE_CW2$ source /venv/bin/activate
+bash: /venv/bin/activate: No such file or directory
+jg2023@texel43:SSE_CW2$ source .venv/bin/activate
+bash: .venv/bin/activate: No such file or directory
+jg2023@texel43:SSE_CW2$ git add --all
+jg2023@texel43:SSE_CW2$ git commit -m "asdk"
+[main 23cc581] asdk
+ 1 file changed, 49 insertions(+)
+ create mode 100644 api/#*shell*#
+jg2023@texel43:SSE_CW2$ git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 983 bytes | 327.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.        
+To github.com:Radifire/SSE_CW2.git
+   6c11244..23cc581  main -> main
+jg2023@texel43:SSE_CW2$ git add --all
+jg2023@texel43:SSE_CW2$ git
