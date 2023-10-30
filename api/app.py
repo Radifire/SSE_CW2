@@ -36,8 +36,8 @@ def process_query(query):
         numbers = []
         for word in query_words:
             if word.isdigit():
-        if numbers:
-            return sum(numbers)
+                if numbers:
+                    return sum(numbers)
         else:
             return "No numbers found in the query"            
     return "Unknown"
