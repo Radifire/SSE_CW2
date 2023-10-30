@@ -26,3 +26,13 @@ def test_largest_number():
 def test_addition():
 
     assert process_query("What is 39 plus 52?") == 91
+
+
+def test_multiplication():
+
+    assert process_query("What is 45 multiplied by 5?") == 225
+
+
+def test_find_square_and_cube():
+
+    assert process_query("Which of the following numbers is both a square and a cube: 3819, 944, 1772, 125, 319, 4356, 64?") == 64
