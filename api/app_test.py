@@ -20,4 +20,9 @@ def test_team_name():
 def test_largest_number():
 
     assert process_query("Which of the following \
-    numbers is the largest: 1, 72, 61") == 72
+    numbers is the largest: 1, 72, 61?") == 72
+
+
+def test_addition():
+
+    assert process_query("What is 39 plus 52?") == 91
