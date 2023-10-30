@@ -15,22 +15,32 @@ def submit():
     input_age = request.form.get("age")
     return render_template("hello.html", name=input_name, age=input_age)
 
+def get_numbers(query):
+    query_words = query.split(" ")
+    numbers = []
+    for word in query_words:
+        if word[0].isdigit():
+            new_word = ""
+            for w in word:
+                if w.isdigit():
+                    new_word.append(w)
+            numbers.append(int(new_word))
+    return numbers
+
 
 def process_query(query):
     if (query == "dinosaurs"):
         return "Dinosaurs ruled the Earth 200 million years ago"
     elif ("name" in query):
         return "Fly Devs"
-
     elif ("largest" in query):
-        query_words = query.split(" ")
-        numbers = []
-        for word in query_words:
-            if word and word[0].isdigit():
-                word = word[:-1]
-                numbers.append(int(word))
+        numbers = get_numbers(query)
         return max(numbers)
-
+    elif "square" in query:
+        numbers = get_numbers(query)
+        for i in numbers:
+            if (number ** (1/3) + number ** (1/2)).isinteger():
+                return i
     elif "plus" in query:
         query_words = query.split(" ")
         numbers = []
