@@ -15,6 +15,7 @@ def submit():
     input_age = request.form.get("age")
     return render_template("hello.html", name=input_name, age=input_age)
 
+
 def get_numbers(query):
     query_words = query.split(" ")
     numbers = []
@@ -39,7 +40,7 @@ def process_query(query):
     elif "square" in query:
         numbers = get_numbers(query)
         for i in numbers:
-            if (number ** (1/3) + number ** (1/2)).isinteger():
+            if (i ** (1/3) + i ** (1/2)).isinteger():
                 return i
     elif "plus" in query:
         query_words = query.split(" ")
