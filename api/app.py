@@ -31,7 +31,7 @@ def get_numbers(query):
 
 def is_prime(number):
     root = number ** (1/2)
-    for i in range(2, root+1):
+    for i in range(2, round(root)+1):
         if number % i == 0:
             return False
     return True
