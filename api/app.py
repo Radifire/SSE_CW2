@@ -36,15 +36,16 @@ def process_query(query):
         return "Fly Devs"
     elif ("largest" in query):
         numbers = get_numbers(query)
-        return max(numbers)
+        return str(max(numbers))
     elif "square" in query:
         numbers = get_numbers(query)
         for i in numbers:
+            i = int(i)
             cube_root = i ** (1/3)
             square_root = i ** (1/2)
             if round(cube_root) ** 3 == i:
                 if round(square_root) ** 2 == i:
-                    return i
+                    return str(i)
     elif "plus" in query:
         query_words = query.split(" ")
         numbers = []
