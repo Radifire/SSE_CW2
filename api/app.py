@@ -25,7 +25,7 @@ def get_numbers(query):
             for w in word:
                 if w.isdigit():
                     new_word += w
-            numbers.append(int(new_word))
+            numbers.append(new_word)
     return numbers
 
 
@@ -40,8 +40,11 @@ def process_query(query):
     elif "square" in query:
         numbers = get_numbers(query)
         for i in numbers:
-            if (i ** (1/3) + i ** (1/2)).isinteger():
-                return i
+            cube_root = i ** (1/3)
+            square_root = i ** (1/2)
+            if round(cube_root) ** 3 == i:
+                if round(square_root) ** 2 == i:
+                    return i
     elif "plus" in query:
         query_words = query.split(" ")
         numbers = []
@@ -51,7 +54,7 @@ def process_query(query):
                     word = word[:-1]
                 numbers.append(int(word))
         if numbers:
-            return sum(numbers)
+            return str(sum(numbers))
         else:
             return "No numbers found in the query"
     return "Unknown"
