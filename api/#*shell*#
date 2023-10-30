@@ -69,4 +69,40 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To github.com:Radifire/SSE_CW2.git
    6c11244..23cc581  main -> main
 jg2023@texel43:SSE_CW2$ git add --all
-jg2023@texel43:SSE_CW2$ git
+jg2023@texel43:SSE_CW2$ git commit -m
+error: switch `m' requires a value
+jg2023@texel43:SSE_CW2$ git commit -m "asd"
+[main ecfecdf] asd
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+jg2023@texel43:SSE_CW2$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 346 bytes | 173.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.        
+To github.com:Radifire/SSE_CW2.git
+   23cc581..ecfecdf  main -> main
+jg2023@texel43:SSE_CW2$ git pull
+Already up-to-date.
+jg2023@texel43:SSE_CW2$ git add --all
+jg2023@texel43:SSE_CW2$ git commmit -m "no ;"
+git: 'commmit' is not a git command. See 'git --help'.
+
+The most similar command is
+	commit
+jg2023@texel43:SSE_CW2$ git commit -m "no ;"
+[main 461ddc7] no ;
+ 2 files changed, 25 insertions(+), 2 deletions(-)
+jg2023@texel43:SSE_CW2$ git push
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 724 bytes | 362.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.        
+To github.com:Radifire/SSE_CW2.git
+   ecfecdf..461ddc7  main -> main
+jg2023@texel43:SSE_CW2$ 

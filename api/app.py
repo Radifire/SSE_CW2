@@ -25,7 +25,7 @@ def process_query(query):
         query_words = query.split(" ")
         numbers = []
         for word in query_words:
-            if word[0].isdigit():
+            if word and word[0].isdigit():
                 word = word[:-1]
                 numbers.append(int(word))
         return str(max(numbers))
