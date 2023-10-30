@@ -47,4 +47,5 @@ def test_subtraction():
 
 def test_list_primes():
 
-    assert process_query("Which of the following numbers are primes: 71, 62, 4, 36, 31?") == "71, 31"
+    assert process_query("Which of the following numbers\
+     are primes: 71, 62, 4, 36, 31?") == "71, 31"
