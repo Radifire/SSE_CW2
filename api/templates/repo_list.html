@@ -1,0 +1,16 @@
+ <html>
+ <table>
+  <tr>
+    <th>Repos</th>
+	<th>Last Updated</th>
+  </tr>
+  {% for repo in repos %}
+  <tr>
+	<td> {{ repo["full_name"] }} </td>
+	<td> {{ repo["updated_at"] }} </td>
+  </tr>
+  {% endfor %}
+  </ul>
+ </tr>
+</table>
+</html>
