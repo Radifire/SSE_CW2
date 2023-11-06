@@ -69,3 +69,14 @@ def query():
     query_param = request.args.get('q')
     response = process_query(query_param)
     return response
+
+
+@app.route('/extension')
+def extension():
+    return render_template("extension.html")
+
+
+@app.route('/extension/response', methods=['POST'])
+def response():
+    git_user_name = request.form.get("username")
+    return f"Hello {git_user_name}"
