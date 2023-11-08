@@ -80,8 +80,8 @@ def extension():
 @app.route('/extension/response', methods=['POST'])
 def response():
     git_user_name = request.form.get("username")
-    message = "<"
-    response = requests.get(f"https://api.github.com/users/{git_user_name}/repos")
+    response = requests.get(f"https://api.github.com/users/\
+{git_user_name}/repos")
     if response.status_code == 200:
         repos = response.json()
         return render_template("repo_list.html", repos=repos)
