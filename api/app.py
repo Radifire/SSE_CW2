@@ -81,9 +81,15 @@ def extension():
 @app.route('/extension/response', methods=['POST'])
 def response():
     git_user_name = request.form.get("username")
+    commits = []
     response = requests.get(f"https://api.github.com/users/\
 {git_user_name}/repos")
     if response.status_code == 200:
         repos = response.json()
-        return render_template("repo_list.html", repos=repos)
-    return "Error"
+        for repo in repos:
+            repo_response = requests.get(f"{repo['commits_url'][:-6]}")
+            if repo_response.status_code == 200:
+                commits.append( repo_response.json() )
+        return render_template("repo_list.html", repos=repos, git_name=git_user_name, commits=commits)
+    return f"Could not find Github account {git_user_name}. \
+    Please check the name and try again"

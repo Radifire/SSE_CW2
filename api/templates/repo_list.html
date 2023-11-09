@@ -24,7 +24,7 @@
 </div>
 <div class="row">
 <div class="col-md-12">
-<h3 class="h5 mb-4 text-center">Radifire</h3>
+<h3 class="h5 mb-4 text-center">{{git_name}}</h3>
 <div class="table-wrap">
 <table class="table myaccordion table-hover" id="accordion">
 <thead>
@@ -48,10 +48,13 @@
 <tr>
     <td colspan="6" id="collapse{{ loop.index }}" class="acc collapse" data-parent="#accordion" style="">
         <ul>
-            <li> Author </li>
-            <li> Commit Hash</li>
-            <li> Commit message </li>
-        </ul>
+            {% if commits[loop.index - 1] %}
+                <li> Author: {{ commits[loop.index - 1][0]["commit"]["committer"]["name"] }} </li>
+                <li> Commit Hash: {{ commits[loop.index - 1][0]["sha"] }}</li>
+                <li> Commit message: {{ commits[loop.index - 1][0]["commit"]["message"] }} </li>
+            {% else %}
+                <li> No commits available </li>
+            {% endif %}
     </td>
 </tr>
 {% endfor %}
