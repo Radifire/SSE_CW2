@@ -3,6 +3,7 @@ import requests
 
 
 app = Flask(__name__)
+app.config['STATIC_FOLDER'] = 'static'
 
 
 @app.route("/")

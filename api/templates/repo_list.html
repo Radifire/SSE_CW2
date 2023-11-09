@@ -1,16 +1,72 @@
- <html>
- <table>
-  <tr>
-    <th>Repos</th>
-	<th>Last Updated</th>
-  </tr>
-  {% for repo in repos %}
-  <tr>
-	<td> {{ repo["full_name"] }} </td>
-	<td> {{ repo["updated_at"] }} </td>
-  </tr>
-  {% endfor %}
-  </ul>
- </tr>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Table 08</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Update the CSS links using url_for -->
+    <link href="{{ url_for('static', filename='css/css.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css">
+    
+    <!-- Update the JavaScript links using url_for -->
+    <script defer="defer" referrerpolicy="origin" src="{{ url_for('static', filename='js/s.js') }}"></script>
+</head>
+<body>
+<section class="ftco-section">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-6 text-center mb-4">
+<h2 class="heading-section">List of Repositories</h2>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<h3 class="h5 mb-4 text-center">Radifire</h3>
+<div class="table-wrap">
+<table class="table myaccordion table-hover" id="accordion">
+<thead>
+<tr>
+  <th>#</th>
+  <th>Repos</th>
+  <th>Last Updated</th>
+<th>&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+{% for repo in repos %}
+<tr data-toggle="collapse" data-target="#collapse{{ loop.index }}" aria-expanded="false" aria-controls="collapse{{ loop.index }}" class="collapsed">
+    <th scope="row"> {{ loop.index }} </th>
+    <td> {{ repo["full_name"] }} </td>
+    <td> {{ repo["updated_at"] }} </td>
+    <td>
+        <i class="fa" aria-hidden="true"></i>
+    </td>
+</tr>
+<tr>
+    <td colspan="6" id="collapse{{ loop.index }}" class="acc collapse" data-parent="#accordion" style="">
+        <ul>
+            <li> Author </li>
+            <li> Commit Hash</li>
+            <li> Commit message </li>
+        </ul>
+    </td>
+</tr>
+{% endfor %}
+</tbody>
 </table>
-</html>
+</div>
+</div>
+</div>
+</div>
+</section>
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/popper.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script defer="defer" src="{{ url_for('static', filename='js/v84a3a4012de94ce1a686ba8c167c359c1696973893317.es') }}" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon="{&quot;rayId&quot;:&quot;8235b7122b5c88a9&quot;,&quot;version&quot;:&quot;2023.10.0&quot;,&quot;token&quot;:&quot;cd0b4b3a733644fc843ef0b185f98241&quot;}" crossorigin="anonymous"></script>
+
+
+</body></html>
