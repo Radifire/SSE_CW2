@@ -49,9 +49,16 @@
     <td colspan="6" id="collapse{{ loop.index }}" class="acc collapse" data-parent="#accordion" style="">
         <ul>
             {% if commits[loop.index - 1] %}
-                <li> Author: {{ commits[loop.index - 1][0]["commit"]["committer"]["name"] }} </li>
-                <li> Commit Hash: {{ commits[loop.index - 1][0]["sha"] }}</li>
-                <li> Commit message: {{ commits[loop.index - 1][0]["commit"]["message"] }} </li>
+                <li> Author of Last Commit: {{ commits[loop.index - 1][0]["commit"]["author"]["name"] }} </li>
+                <li> Last Commit Hash: {{ commits[loop.index - 1][0]["sha"] }}</li>
+                <li> Last Commit message: {{ commits[loop.index - 1][0]["commit"]["message"] }} </li>
+                <li> Contributors:
+                    <ul>
+                        {% for contributor in contributors[loop.index - 1] %}
+                        <a href="{{ url_for('extension', username=contributor['login']) }}">{{ contributor['login'] }}</a>
+                        {% endfor %}
+                    </ul>
+                </li>
             {% else %}
                 <li> No commits available </li>
             {% endif %}
