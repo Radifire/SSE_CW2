@@ -55,8 +55,12 @@
                 <li> Contributors:
                     <ul>
                         {% for contributor in contributors[loop.index - 1] %}
-                        <a href="{{ url_for('extension', username=contributor['login']) }}">{{ contributor['login'] }}</a>
+                            
+                            {% if contributor['login'] != git_name %}
+                                <li><a href="/extension/response?username={{ contributor['login'] }}">{{ contributor['login'] }}</a></li>
+                            {% endif %}
                         {% endfor %}
+
                     </ul>
                 </li>
             {% else %}

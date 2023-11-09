@@ -91,10 +91,13 @@ def response():
         for repo in repos:
             repo_response = requests.get(f"{repo['commits_url'][:-6]}")
             if repo_response.status_code == 200:
-                commits.append( repo_response.json() )
+                commits.append(repo_response.json())
             contributors_response = requests.get(f"{repo['contributors_url']}")
             if contributors_response.status_code == 200:
-                contributors.append( contributors_response.json() )
-        return render_template("repo_list.html", repos=repos, git_name=git_user_name, commits=commits, contributors=contributors)
+                contributors.append(contributors_response.json())
+        return render_template(
+                            "repo_list.html", repos=repos,
+                            git_name=git_user_name, commits=commits,
+                            contributors=contributors)
     return f"Could not find Github account {git_user_name}. \
     Please check the name and try again"
